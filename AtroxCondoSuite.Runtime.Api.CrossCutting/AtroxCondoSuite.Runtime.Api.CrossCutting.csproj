@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+		<PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AtroxCondoSuite.Runtime.Api.Domain\AtroxCondoSuite.Runtime.Api.Domain.csproj" />
+		<ProjectReference Include="..\AtroxCondoSuite.Runtime.Api.DataAccess.Contracts\AtroxCondoSuite.Runtime.Api.DataAccess.Contracts.csproj" />
+	</ItemGroup>
+
+</Project>
+

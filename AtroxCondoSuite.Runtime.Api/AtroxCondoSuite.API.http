@@ -1,0 +1,12 @@
+@AtroxCondoSuite.Runtime.Api_HostAddress = http://localhost:5255
+
+GET {{AtroxCondoSuite.Runtime.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+
+
+
+
