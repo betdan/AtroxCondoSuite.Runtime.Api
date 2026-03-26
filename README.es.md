@@ -31,9 +31,6 @@ Requeridos por API Gateway y por el runtime:
 - `x-user-id`
 - `x-client-ip`
 
-## Request de ejemplo
-Revisa `requests/curl_execute_audit_LogExecutionStart.sh`.
-
 ## Configuración clave
 `AtroxCondoSuite.Runtime.Api/appsettings.json`
 - `RdsSqlServer`: conexión a SQL Server.
@@ -45,11 +42,3 @@ Revisa `requests/curl_execute_audit_LogExecutionStart.sh`.
 - Las decisiones de whitelist y los parámetros del SP se cachean al primer uso (lazy).
 - Si el cache falla, el runtime continúa sin cache.
 
-## Deploy (SAM)
-Ver carpeta `Deploy/`:
-- `lambda.yaml`: un Lambda por esquema.
-- `api-gateway.yaml`: rutas por esquema.
-
-## Notas
-- Los SP usan `@i_` para inputs, `@o_` para outputs y `@i_debug` para prints de debug.
-- Los prints solo se emiten si `@i_debug = 1`.
