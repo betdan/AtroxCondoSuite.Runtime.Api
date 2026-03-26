@@ -31,9 +31,6 @@ These are required by API Gateway and the runtime:
 - `x-user-id`
 - `x-client-ip`
 
-## Sample request
-See `requests/curl_execute_audit_LogExecutionStart.sh`.
-
 ## Configuration highlights
 `AtroxCondoSuite.Runtime.Api/appsettings.json`
 - `RdsSqlServer`: SQL Server connection.
@@ -45,11 +42,3 @@ See `requests/curl_execute_audit_LogExecutionStart.sh`.
 - Whitelist decisions and stored procedure parameter metadata are cached on first use (lazy).
 - If cache is unavailable, the runtime continues without it.
 
-## Deployment (SAM)
-See the `Deploy/` folder:
-- `lambda.yaml`: one Lambda per schema.
-- `api-gateway.yaml`: HTTP API routes per schema.
-
-## Notes
-- Stored procedures follow `@i_` for input, `@o_` for output, and `@i_debug` for debug prints.
-- Debug prints are emitted only when `@i_debug = 1`.
